@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Loja Online - Kf Semijoias</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Allura&family=Luxurious+Roman&display=swap" rel="stylesheet">
+<style>
+
+	body {
+		background: #FFFDD0;
+		background: radial-gradient(circle, rgba(255, 253, 208, 1) 0%, rgba(255, 248, 194, 1) 53%, rgba(255, 215, 0, 0) 100%);
+	}
+
+	header {
+		text-align: center;
+	}
+
+	.top-image {
+	    display: block;
+	    margin: 0 auto;
+	    padding-top: 10px;
+	    text-align: center;
+	}
+
+	hr {
+	    display: block;
+	    margin-top: 10px !important;
+	    margin: 0 auto;
+	    text-align: center;
+	    background-color: #FFD700;
+	    width: 10%;
+	    height: 5px !important;
+	    border: none;
+	}
+
+
+	.title {
+		font: normal 62px "Allura", sans-serif;
+		color: #000;
+	}
+
+	.subtitle {
+		font: normal 48px "Luxurious Roman", sans-serif;
+	}
+
+	main {
+		padding-top: 2rem;
+		padding-bottom: 10rem;
+	}
+
+	.columns {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 auto;
+	}
+
+
+	img {
+		border-radius: 5px;
+	}
+
+	.centered img {
+		width: 366px;
+		height: auto;
+		margin: 0px 20px 0px 20px;
+	}
+
+	.edge img {
+		width: 300px;
+		height: auto;
+	}
+
+	.pulled-right {
+		float: right;
+	}
+
+	.pulled-left {
+		float: left;
+	}
+
+	.promo {
+	    position: absolute;
+	    width: 250px;
+	    height: 250px;
+	    border-radius: 50%;
+	    background-color: beige;
+	    font: normal 42px "Aldrich", sans-serif;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    box-shadow: -5px -5px 10px #ebebd3, 5px 5px 10px #ffffe5;
+	    bottom: -125px;
+	    left: 50%;
+	    transform: translateX(-50%);
+	}
+
+	.column:hover {
+	    transform: scale(1.1);
+	    transition: transform 0.3s ease-in-out;
+	}
+
+
+
+	footer {
+		width: 100%;
+		line-height: 10rem;
+	}
+
+	.footer-text {
+		margin-top: 10px;
+		font: normal 28px "Luxurious Roman", sans-serif;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+@media only screen and (max-width: 1023px) {
+    main {
+        display: flex;
+        overflow-x: auto; /* Permite rolagem horizontal */
+        scroll-behavior: smooth;
+        padding-top: 66px;
+        padding-bottom: 66px;
+    }
+
+    main::-webkit-scrollbar {
+        display: none;
+    }
+
+    .columns {
+        width: max-content;
+        flex-wrap: nowrap;
+    }
+
+    .column {
+        flex: 0 0 auto;
+        margin: 5px;
+    }
+
+    .edge img {
+        width: 300px;
+        height: auto;
+    }
+
+    .centered img {
+        width: 366px;
+        height: auto;
+    }
+
+    .pulled-left {
+        margin-left: 0px !important; /* Remove deslocamento inicial */
+    }
+
+    .pulled-right {
+        margin-right: 0px !important; /* Remove deslocamento inicial */
+    }
+
+    .footer-text {
+    	font-size: 18px !important;
+    	text-align: left;
+    }
+}
+</style>
+</head>
+<body>
+	<header>
+		<div class="top-image">
+			<img src="images/diamond-website.webp" width="120" height="auto">
+		</div>
+		<hr>
+		<h1 class="title">KF Semijoias</h1>
+		<span class="subtitle">GOLDEN LUXURY</span>		
+	</header>
+	<main>
+		<div class="columns">
+			<div class="column edge pulled-left">
+				<a href="https://kfjoias.com.br/brinco-coracao-liso/"><img src="images/brinco-coracao-liso-dourado.webp" alt="Brinco Coração Liso"></a>
+			</div>
+			<div class="column centered" style="position: relative;">
+				<span class="promo">30% OFF</span>
+				<a href="https://kfjoias.com.br/brinco-argola-triangular-dourado/"><img src="images/brinco-argola-triangular-dourado.webp" alt="Brinco Argola Triangular Dourado"></a>
+			</div>
+			<div class="column edge pulled-right">
+				<a href="https://kfjoias.com.br/brinco-trio-argola-coracao/"><img src="images/brinco-trio-argola-coracao.webp" alt="Brinco Trio Argola Coração"></a>
+			</div>
+		</div>		
+	</main>
+	<footer>
+		<span class="footer-text">Promoção Válida até 10/05/2025 ou enquanto durarem os estoques.</span>
+		<span class="fotter-sub-text"></span>	
+	</footer>
+</body>
+</html>
