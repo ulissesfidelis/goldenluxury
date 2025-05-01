@@ -25,13 +25,17 @@
 	    text-align: center;
 	}
 
+	a {
+		color: #000;
+	}
+
 	hr {
 	    display: block;
 	    margin-top: 10px !important;
 	    margin: 0 auto;
 	    text-align: center;
 	    background-color: #FFD700;
-	    width: 10%;
+	    width: 255px;
 	    height: 5px !important;
 	    border: none;
 	}
@@ -43,20 +47,28 @@
 	}
 
 	.subtitle {
+		display: block;
 		font: normal 48px "Luxurious Roman", sans-serif;
+		text-align: center;
+		margin: 22px;
 	}
 
 	main {
-		padding-top: 2rem;
-		padding-bottom: 10rem;
+		padding-bottom: 4rem;
 	}
 
 	.columns {
 		width: 100%;
+		min-height: 686px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		margin: 0 auto;
+		padding-bottom: 66px;
+	}
+
+	.column {
+		position: relative;
 	}
 
 
@@ -95,8 +107,18 @@
 	    justify-content: center;
 	    box-shadow: -5px -5px 10px #ebebd3, 5px 5px 10px #ffffe5;
 	    bottom: -125px;
-	    left: 50%;
-	    transform: translateX(-50%);
+	}
+
+	.pr-1 {
+	    transform: translateX(25px) translateY(15%);
+	}
+
+	.pr-2 {
+	    transform: translateX(75px) translateY(15%);
+	}
+
+	.pr-3 {
+	    transform: translateX(25px) translateY(15%);
 	}
 
 	.column:hover {
@@ -108,7 +130,6 @@
 
 	footer {
 		width: 100%;
-		line-height: 10rem;
 	}
 
 	.footer-text {
@@ -120,18 +141,22 @@
 		justify-content: center;
 	}
 
-@media only screen and (max-width: 1023px) {
-    main {
-        display: flex;
-        overflow-x: auto; /* Permite rolagem horizontal */
-        scroll-behavior: smooth;
-        padding-top: 66px;
-        padding-bottom: 66px;
-    }
+	.payment-images {
+		margin-top: 36px;
+		text-align: center;
+	}
 
-    main::-webkit-scrollbar {
-        display: none;
-    }
+	.payment-images img {
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+
+	.social-media {
+		margin-top: 36px;
+		text-align: center;
+	}
+
+@media only screen and (max-width: 1023px) {
 
     .columns {
         width: max-content;
@@ -166,6 +191,114 @@
     	text-align: left;
     }
 }
+
+.wrapper {
+    margin: 26px auto;
+    width: 80%;
+    position: relative;
+    text-align: center;
+    font-family: "Aldrich", sans-serif;
+    overflow: hidden;
+
+    &:before, &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        height: 10px;
+        z-index: 10;
+    }
+
+    &:before {
+        top: 0px;
+        background: linear-gradient(to bottom, rgba(98, 0, 238, 1) 0%, rgba(98, 0, 238, 0) 100%);
+    }
+
+    &:after {
+        bottom: 0px;
+        background: linear-gradient(to top, rgba(98, 0, 238, 0) 0%, rgba(98, 0, 238, 1) 100%);
+    }
+}
+
+
+.time-part-wrapper {
+    display: inline;
+    margin-right: 20px;
+    position: relative;
+}
+
+.time-part {
+    width: 140px;
+    height: 100px;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.digit-wrapper {
+    position: relative;
+    display: block;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.digit {
+    display: block;
+    font-size: 5rem;
+    color: #6200ee;
+
+}
+
+.abb {
+    display: none;
+}
+
+.letter {
+    font-size: 2rem;
+    color: rgba(98, 0, 238, 0.8);
+}
+
+#countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: 1023px) {
+    .wrapper {
+        width: 100% !important;
+
+        &:before {
+            height: 5px;
+        }
+
+        &:after {
+            height: 6px;
+        }       
+    }
+    .time-part {
+        width: 72px;
+        height: 60px;
+    }
+    .digit {
+        font-size: 52px !important;
+    }
+    .abb {
+        font-size: 28px;
+        display: flex;
+        margin-left: -20px;
+        color: rgba(98, 0, 238, 0.8);
+    }
+    .letter {
+        display: none;
+    }
+}
 </style>
 </head>
 <body>
@@ -175,25 +308,90 @@
 		</div>
 		<hr>
 		<h1 class="title">KF Semijoias</h1>
-		<span class="subtitle">GOLDEN LUXURY</span>		
+		<span class="subtitle">Golden Luxury</span>
 	</header>
 	<main>
 		<div class="columns">
-			<div class="column edge pulled-left">
-				<a href="https://kfjoias.com.br/brinco-coracao-liso/"><img src="images/brinco-coracao-liso-dourado.webp" alt="Brinco Coração Liso"></a>
-			</div>
-			<div class="column centered" style="position: relative;">
-				<span class="promo">30% OFF</span>
-				<a href="https://kfjoias.com.br/brinco-argola-triangular-dourado/"><img src="images/brinco-argola-triangular-dourado.webp" alt="Brinco Argola Triangular Dourado"></a>
-			</div>
-			<div class="column edge pulled-right">
-				<a href="https://kfjoias.com.br/brinco-trio-argola-coracao/"><img src="images/brinco-trio-argola-coracao.webp" alt="Brinco Trio Argola Coração"></a>
-			</div>
-		</div>		
+			<a href="https://kfjoias.com.br/brinco-coracao-liso/">
+				<div class="column edge pulled-left">
+					<span class="promo pr-1">25% OFF</span>
+					<img src="images/brinco-coracao-liso-dourado.webp" alt="Brinco Coração Liso">
+				</div>
+			</a>
+			<a href="https://kfjoias.com.br/brinco-argola-triangular-dourado/">
+				<div class="column centered" style="position: relative;">
+					<span class="promo pr-2">35% OFF</span>
+					<img src="images/brinco-argola-triangular-dourado.webp" alt="Brinco Argola Triangular Dourado">
+				</div>
+			</a>
+			<a href="https://kfjoias.com.br/brinco-trio-argola-coracao/">
+				<div class="column edge pulled-right">
+					<span class="promo pr-3">25% OFF</span>
+					<img src="images/brinco-trio-argola-coracao.webp" alt="Brinco Trio Argola Coração">
+				</div>
+			</a>
+		</div>
 	</main>
+		<span class="subtitle">Promoção acaba em</span>
+		<div class="wrapper">
+		    <div id="countdown">
+		        <div class="time-part-wrapper">
+		            <div class="time-part days">
+		                <div class="digit-wrapper" id="days-wrapper">
+		                    <span class="digit">00</span>
+		                </div>
+		            </div>
+		        </div>
+		        <span class="abb">d</span>
+		        <span class="letter">dia(s)</span>
+		        <div class="time-part-wrapper">
+		            <div class="time-part hours">
+		                <div class="digit-wrapper" id="hours-wrapper">
+		                    <span class="digit">00</span>
+		                </div>
+		            </div>
+		        </div>
+		        <span class="abb">h</span>
+		        <span class="letter">hora(s)</span>
+		        <div class="time-part-wrapper">
+		            <div class="time-part minutes">
+		                <div class="digit-wrapper" id="minutes-wrapper">
+		                    <span class="digit">00</span>
+		                </div>
+		            </div>
+		        </div>
+		        <span class="abb">m</span>
+		        <span class="letter">minuto(s)</span>
+		        <div class="time-part-wrapper">
+		            <div class="time-part seconds">
+		                <div class="digit-wrapper" id="seconds-wrapper">
+		                    <span class="digit">00</span>
+		                </div>
+		            </div>
+		        </div>
+		        <span class="abb">s</span>
+		        <span class="letter">segundo(s)</span>
+		    </div>
+		</div>
+		<span class="subtitle">ou enquanto durarem os estoques.</span>
 	<footer>
-		<span class="footer-text">Promoção Válida até 10/05/2025 ou enquanto durarem os estoques.</span>
-		<span class="fotter-sub-text"></span>	
-	</footer>
+		<div class="payment-images">
+			<span class="subtitle">Formas de Pagamento</span>
+			<img src="images/pay/visa.png" alt="Visa" width="66" height="46">
+			<img src="images/pay/dinners.png" alt="Dinners" width="66" height="46">
+			<img src="images/pay/mastercard.png" alt="Mastercard" width="66" height="46">
+			<img src="images/pay/hipercard.png" alt="Hipercard" width="66" height="46">
+			<img src="images/pay/elo.png" alt="Elo" width="66" height="46">
+			<img src="images/pay/amex.png" alt="Amex" width="66" height="46">
+			<img src="images/pay/discover.png" alt="Discover" width="66" height="46">
+			<img src="images/pay/pix.png" alt="PIX" width="66" height="46">				
+		</div>
+		<div class="payment-images">
+			<span class="subtitle">Acompanhe nossas redes sociais</span>
+			<a href="https://www.facebook.com/kfsemijoias7"><img src="images/social/facebook.png" alt="Facebook" width="66px"></a>
+			<a href="https://instagram.com/kfsemijoias7"><img src="images/social/instagram.png" alt="Instagram" width="66px"></a>
+		</div>
+</footer>
+<script src="js/script.js"></script>
 </body>
 </html>
