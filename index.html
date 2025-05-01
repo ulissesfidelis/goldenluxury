@@ -157,6 +157,17 @@
 	}
 
 @media only screen and (max-width: 1023px) {
+	main {
+		display: flex;
+		overflow-x: auto;
+		scroll-behavior: smooth;
+		padding-top: 66px;
+		padding-bottom: 66px;
+	}
+
+    main::-webkit-scrollbar {
+        display: none;
+    }
 
     .columns {
         width: max-content;
